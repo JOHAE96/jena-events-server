@@ -6,8 +6,9 @@
  */
 
 class User {
-    constructor(name, pw) {
+    constructor(name, email, pw) {
         this._name = name;
+        this.email = email;
         this.hashedPassword = pw;
     }
 
@@ -19,13 +20,22 @@ class User {
         return this.hashedPassword;
     }
 
-    sethashedpassword(value) {
-        this.hashedPassword = value;
+    getEmail() {
+        return this.email;
     }
 
-    setName(value) {
-        this._name = value;
+    sethashedpassword(pw) {
+        this.hashedPassword = pw;
     }
+
+    setName(name) {
+        this._name = name;
+    }
+
+    setEmail(email) {
+        this.email = email;
+    }
+
 }
 
 module.exports = User;
